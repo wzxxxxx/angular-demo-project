@@ -1,0 +1,4 @@
+<div class="container">
+    <input #input placeholder="add a new todo..." />
+    <button (click)="addTodo(input.value); input.value = ''">Add</button>
+</div>

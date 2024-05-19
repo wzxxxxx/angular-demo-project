@@ -1,0 +1,12 @@
+<div>
+    <div *ngFor="let task of (todoListService.toDoList$ | async)" class="to-do-item">
+        <div
+         class="task-name"
+         (click)="editTaskStatus(task.taskName, !task.finished)"
+         [ngClass]="{'task-finished': task.finished}"
+         >
+          {{ "√" + task.taskName }}
+         </div>
+        <div class="delete-icon" (click)="removeTodo(task.taskName)">x</div>
+    </div>
+</div>
